@@ -2,6 +2,12 @@ name: Code Scanning - CodeQL
 
 on:
   workflow_call:
+    inputs:
+      build-path:
+        description: "Build path"
+        default: 'scripts'
+        required: false
+        type: string
   workflow_dispatch:
 
 jobs:
@@ -29,7 +35,7 @@ jobs:
       - name: Build
         run: |
           build_git.bat < nul
-        working-directory: ${{ github.workspace }}\scripts
+        working-directory: ${{ github.workspace }}\${{ inputs.build-path || 'scripts' }}
         shell: cmd
 
       - name: Perform CodeQL Analysis
