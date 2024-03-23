@@ -1,3 +1,3 @@
-# MPE
+# Tools for Mediaportal
 
-MPE for Mediaportal
+Tools for Mediaportal
