@@ -15,7 +15,7 @@ jobs:
     runs-on: windows-2019
     permissions:
       # required for all workflows
-      security-events: write    
+      security-events: write
     steps:
       - name: Setup Visual Studio 2019
         uses: microsoft/setup-msbuild@v2
